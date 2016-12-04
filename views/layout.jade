@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title #{title} - Node RSS Reader
+    link(rel='stylesheet', href='/stylesheets/pure-min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src='/javascripts/jquery-3.1.1.min.js')
+    block javascript
+  body
+    div(class="pure-menu pure-menu-horizontal")
+      ul(class="pure-menu-list")
+        li(class="pure-menu-item")
+          a(href="/reader", class="pure-menu-link") Reader
+        li(class="pure-menu-item")
+          a(href="/stream", class="pure-menu-link") Stream
+        li(class="pure-menu-item")
+          a(href="/feed", class="pure-menu-link") Feeds
+        block menu
+    div#content
+      block content

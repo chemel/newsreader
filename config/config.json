@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": "toor",
+    "database": "node-newsreader",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "toor",
+    "database": "node-newsreader",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "dev-lite": {
+    "storage": "data/database.sqlite",
+    "dialect": "sqlite"
+  },
+  "prod-lite": {
+    "storage": "data/database.sqlite",
+    "dialect": "sqlite",
+    "logging": false
+  }
+}

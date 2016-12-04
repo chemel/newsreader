@@ -1,0 +1,10 @@
+extends ../layout
+
+block javascript
+  script(type='text/javascript', src='/javascripts/socket.io.min.js')
+  script(type='text/javascript', src='/javascripts/entries.js')
+  script(type='text/javascript', src='/javascripts/stream.js')
+
+block content
+  ul#entries
+  div#entry

@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+  div#page
+    div#feed-create.pure-form
+      form(action='/feed/create', method='POST')
+        input(type='text', name='url', placeholder='New feed URL')
+        button(type='submit', class='pure-button pure-button-primary') Add
+    table(class='pure-table pure-table-horizontal')
+      thead
+        tr
+          th Id
+          th Url
+          th Title
+          th Entries
+          th Enabled
+          th
+      tbody
+        each feed in feeds
+          tr
+            td= feed.id
+            td
+              a(href='#{feed.url}', target='_blank')= feed.url
+            td= feed.title
+            td #{typeof(counter[feed.id]) !== 'undefined' ? counter[feed.id] : '0'}
+            td= feed.enabled
+            td
+              a(href='/feed/#{feed.id}/purge', class='pure-button button-error') Purge
+              a(href='/feed/#{feed.id}/delete', class='pure-button button-error') Delete

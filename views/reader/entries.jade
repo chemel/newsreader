@@ -1,0 +1,4 @@
+each entry in entries
+  li(class='entry #{entry.readed ? "" : "unread"}', data-id='#{entry.id}', data-feed-id='#{entry.feedId}')
+    span.date= entry.formatedDate
+    span=entry.title

@@ -1,0 +1,20 @@
+extends ../layout
+
+block javascript
+  script(type='text/javascript', src='/javascripts/entries.js')
+  script(type='text/javascript', src='/javascripts/reader.js')
+
+block menu
+  li(class="pure-menu-item")
+    a(id='btn-markallread', class="pure-button button-success") Mark all read
+
+block content
+  div#reader
+    ul#feeds
+      each feed in feeds
+        li(id="feed-#{feed.id}", class="feed", title="#{feed.url}", data-id="#{feed.id}")
+          span.unread
+          img(class='feed-favicon', src='#{feed.favicon}')
+          span #{feed.title ? feed.title : feed.url}
+    ul#entries
+    div#entry
