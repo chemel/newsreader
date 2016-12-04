@@ -6,6 +6,14 @@
   "scripts": {
     "start": "node ./bin/www"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chemel/newsreader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chemel/newsreader/issues"
+  },
+  "license": "GPL-3.0",
   "dependencies": {
     "body-parser": "~1.15.2",
     "compare-versions": "^3.0.0",
